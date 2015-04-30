@@ -1,0 +1,6 @@
+share/oracle*
+share/sqlldr
+share/callhistory
+share/copy-sqlldr-dir.sh
+.vagrant
+
