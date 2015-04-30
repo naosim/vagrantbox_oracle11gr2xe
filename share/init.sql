@@ -1,5 +1,26 @@
+grant
+  ALTER SESSION,
+  CREATE CLUSTER,
+  CREATE DATABASE LINK,
+  CREATE SEQUENCE,
+  CREATE SESSION,
+  CREATE SYNONYM,
+  CREATE TABLE,
+  CREATE VIEW
+to connect;
+
+grant
+  CREATE CLUSTER,
+  CREATE OPERATOR,
+  CREATE SEQUENCE,
+  CREATE PROCEDURE,
+  CREATE TRIGGER,
+  CREATE TABLE,
+  CREATE TYPE,
+  connect
+to resource;
+
 create role developer_commons;
-grant create session to developer_commons;
 grant resource to developer_commons;
 
 select * from dba_tablespaces;
