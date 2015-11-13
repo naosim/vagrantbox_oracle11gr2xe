@@ -65,9 +65,10 @@ exit
 ```
 
 * スクリプトの実行
+
 ```Bash
-sqlplus fmc/fmc@127.0.0.1 @/share/sql/binary_to_euc  
-sqlplus fmc/fmc@127.0.0.1 @/share/sql/euc_to_binary  
+sqlplus fmc/fmc@127.0.0.1 @/share/sql/binary_to_euc
+sqlplus fmc/fmc@127.0.0.1 @/share/sql/euc_to_binary
 ```
 
 「めんどくせー！！全部まとめて作成してやるぜーー」の場合はこちら
