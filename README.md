@@ -53,17 +53,17 @@ call create_develop_user('ユーザー名');
 
 上記のプロシージャで以下のユーザーが作成されます。
 
-    * パスワード認証（パスワードはユーザー名と同じ）
-    * developer_commonsロールを付与
-        * resourceロール
-        * create sessionシステム権限
-    * デフォルト表領域はevent
-    * 一時表領域はtemp
-    * 以下の表領域に対しての無制限のクオータ設定
-        * event
-        * event_data01
-        * event_data02
-        * event_idx
+* パスワード認証（パスワードはユーザー名と同じ）
+* developer_commonsロールを付与
+    * resourceロール
+    * create sessionシステム権限
+* デフォルト表領域はevent
+* 一時表領域はtemp
+* 以下の表領域に対しての無制限のクオータ設定
+    * event
+    * event_data01
+    * event_data02
+    * event_idx
 
 ### プロシージャ・ファンクションの作成
 
