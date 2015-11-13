@@ -32,13 +32,14 @@ su - oracle
 ```Bash
 sqlplus sys/oracle@127.0.0.1 as sysdba  
 ```
+
 * 初期化スクリプトを実行
-```
+```Bash
 @/share/init  
 ```
 
 * プロシージャを実行
-```
+```Bash
 call create_develop_user('ユーザー名');    
 ```
 上記のプロシージャで以下のユーザーが作成されます。
@@ -59,16 +60,18 @@ call create_develop_user('ユーザー名');
 ※多くの場合、以下は必須です（fmcユーザーの例）
 
 1. sqlplusにログイン済みの場合は一度ログアウトする
-```
+```Bash
 exit
 ```
+
 * スクリプトの実行
-```
+```Bash
 sqlplus fmc/fmc@127.0.0.1 @/share/sql/binary_to_euc  
 sqlplus fmc/fmc@127.0.0.1 @/share/sql/euc_to_binary  
 ```
+
 「めんどくせー！！全部まとめて作成してやるぜーー」の場合はこちら
-```
+```Bash
 for var in `find /share/sql/*.sql`  
 do  
 sqlplus mobile/mobile@127.0.0.1 @$var  
