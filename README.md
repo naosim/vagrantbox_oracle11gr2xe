@@ -18,16 +18,18 @@ Oracle XE入りのVagrantです。
 開発に必要なユーザーを作成します。ユーザー作成用のプロシージャを実行すると簡単に作成できます。
 #### 手順
 1. ログイン
-```
+```Bash
 vagrant ssh  
 ```
+
 * Oracleユーザーになる
-```
+```Bash
 sudo su -  
 su - oracle  
 ```
+
 * sysユーザーでOracleにログイン
-```
+```Bash
 sqlplus sys/oracle@127.0.0.1 as sysdba  
 ```
 * 初期化スクリプトを実行
