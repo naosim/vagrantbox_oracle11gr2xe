@@ -52,6 +52,7 @@ call create_develop_user('ユーザー名');
 ```
 
 上記のプロシージャで以下のユーザーが作成されます。
+
     * パスワード認証（パスワードはユーザー名と同じ）
     * developer_commonsロールを付与
         * resourceロール
