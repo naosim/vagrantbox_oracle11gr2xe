@@ -14,34 +14,43 @@ Oracle XE入りのVagrantです。
 * 文字コードをEUCに変更
 
 ## プロビジョニング後の処理
+
 ### ユーザーの作成
 開発に必要なユーザーを作成します。ユーザー作成用のプロシージャを実行すると簡単に作成できます。
+
 #### 手順
+
 1. ログイン
+
 ```Bash
 vagrant ssh  
 ```
 
 * Oracleユーザーになる
+
 ```Bash
 sudo su -  
 su - oracle  
 ```
 
 * sysユーザーでOracleにログイン
+
 ```Bash
 sqlplus sys/oracle@127.0.0.1 as sysdba  
 ```
 
 * 初期化スクリプトを実行
+
 ```Bash
 @/share/init  
 ```
 
 * プロシージャを実行
+
 ```Bash
 call create_develop_user('ユーザー名');    
 ```
+
 上記のプロシージャで以下のユーザーが作成されます。
     * パスワード認証（パスワードはユーザー名と同じ）
     * developer_commonsロールを付与
@@ -56,6 +65,7 @@ call create_develop_user('ユーザー名');
         * event_idx
 
 ### プロシージャ・ファンクションの作成
+
 使用するユーザーでログインして、必要なプロシージャ・ファンクションを作成します。ついては./share/sqlディレクトリをご参照ください。
 ※多くの場合、以下は必須です（fmcユーザーの例）
 
@@ -73,6 +83,7 @@ sqlplus fmc/fmc@127.0.0.1 @/share/sql/euc_to_binary
 ```
 
 「めんどくせー！！全部まとめて作成してやるぜーー」の場合はこちら
+
 ```Bash
 for var in `find /share/sql/*.sql`  
 do  
