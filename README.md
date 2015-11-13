@@ -60,6 +60,7 @@ call create_develop_user('ユーザー名');
 ※多くの場合、以下は必須です（fmcユーザーの例）
 
 1. sqlplusにログイン済みの場合は一度ログアウトする
+
 ```Bash
 exit
 ```
